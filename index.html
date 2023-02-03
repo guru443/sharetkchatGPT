@@ -29,6 +29,7 @@
         }
     
         p strong{
+          font-size: 25px;
             color: #009966;
         }
 
@@ -42,6 +43,7 @@
           width: 50%;
           margin: 0 auto;
           text-align: center;
+          padding-top: 60px;
         }
 
         .account-info {
@@ -52,7 +54,7 @@
         margin-bottom: 20px;
         }
 
-        #copyBtn, #refreshBtn {
+        #copyBtntk,#copyBtnmk, #refreshBtn {
             color: rgb(0, 7, 3);
             padding: 10px 15px;
             border: 0px;
@@ -64,14 +66,19 @@
             transition: all 0.3s;
             background-color: #d1d0d042;
             text-transform: uppercase;
-            
+            font-weight: bold;
             
 
         }
 
-        #copyBtn:hover, #refreshBtn:hover {
+        #copyBtntk:hover,#copyBtnmk:hover, #refreshBtn:hover {
             transform: translateY(2px);
             box-shadow: 2px 4px 4px rgba(0,0,0,0.2);
+        }
+        #refreshBtn{
+          background-color: #009966;
+          color: #fff;
+          width: 350px;
         }
 
 
@@ -98,13 +105,22 @@
 <div class="container">
 
     <img src="./logo.png" alt="" >
+    <p ><strong style="color: #000; 
+    opacity: 0.5;
+    letter-spacing: 5px;
+    font-size: 10px; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+    CHAT GPT</strong></p>
     <p ><strong>SHARE TÀI KHOẢN MIỄN PHÍ</strong></p>
     <div class="account-info">
+      
       <h2 id="email"></h2>
       <p id="password">Password: <span id="passwordValue"></span></p>
-      <button id="copyBtn"><p>Copy</p></button>
-      <button id="refreshBtn"><p>Làm Mới</p></button>
+
+      <button id="copyBtntk"><p>Copy TK</p></button>
+      <button id="copyBtnmk"><p>Copy MK</p></button>
     </div>
+    <button id="refreshBtn"><p>Làm Mới</p></button>
   </div>
 
 <script>
@@ -128,18 +144,27 @@ document.getElementById("email").innerHTML = account.email;
 document.getElementById("passwordValue").innerHTML = '*'.repeat(account.password.length);
 
 // Sự kiện cho nút sao chép
-document.getElementById("copyBtn").addEventListener("click", function() {
-  navigator.clipboard.writeText(" TK :"+account.email + " Mk :" + account.password);
-  alert("Đã sao chép");
+document.getElementById("copyBtntk").addEventListener("click", function() {
+  navigator.clipboard.writeText(account.email);
+  alert("Đã sao chép Tài khoản ");
 
   // open two new tabs with the given URLs
-  setTimeout(function() {
+setTimeout(function() {
 window.open("https://shope.ee/2fdCcQGlML", "_blank");
 }, 500);
 
+});
+
+// Sự kiện cho nút sao chép
+document.getElementById("copyBtnmk").addEventListener("click", function() {
+  navigator.clipboard.writeText(account.password);
+  alert("Đã sao chép Mật khẩu ");
+
+  // open two new tabs with the given URLs
 setTimeout(function() {
-window.open("https://www.youtube.com/watch?v=ApZ4sXMYq4g", "_blank");
-}, 1000);
+window.open("https://shope.ee/2fdCcQGlML", "_blank");
+}, 500);
+
 });
 
 
@@ -147,6 +172,7 @@ window.open("https://www.youtube.com/watch?v=ApZ4sXMYq4g", "_blank");
 document.getElementById("refreshBtn").addEventListener("click", function() {
   location.reload();
 });
+
 
 </script>
 </body>
