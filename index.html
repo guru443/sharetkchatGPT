@@ -49,7 +49,26 @@
         .account-info {
         margin-top: 15px;
         }
-    
+
+        .account-info p a{
+        color: #009966;
+        font-size: 12px;
+        animation: blink 3s linear infinite;
+        text-decoration: none;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        
+        @keyframes blink {
+          0% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0.7;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
         .account-info h2 {
         margin-bottom: 20px;
         }
@@ -84,32 +103,39 @@
 
         /* Responsive styles */
     @media (max-width: 767px) {
-    .container {
-        width: 90%;
-      }
-    #copyBtntk,#copyBtnmk, #refreshBtn{
-        
-        width: 120px;
-        height: 68px;
-      }
-    button p {
-        font-size: 14px;
-        padding: 0px 0px;
-      }
-    p strong {
-      font-size: 20px;
-      color: #009966;
-    }
-    }
+      .account-info p a{
+          /* margin-top: 10px; */
+          font-size: 10px;
+          }
+      .container {
+          width: 90%;
+        }
+      #copyBtntk,#copyBtnmk, #refreshBtn{
+          
+          width: 120px;
+          height: 68px;
+        }
+      button p {
+          font-size: 14px;
+          padding: 0px 0px;
+        }
 
-    @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
+      p strong {
+        font-size: 20px;
+        color: #009966;
+      }
+      }
+
+      @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+
+
+      }
 
   
   </style>
@@ -130,7 +156,7 @@
       
       <h2 id="email"></h2>
       <p id="password">Password: <span id="passwordValue"></span></p>
-
+      <p><a href="https://t.me/taochatgpt" target="_blank">TẠO TÀI KHOẢN CHÍNH CHỦ BẰNG GMAIL CÁ NHÂN</a></p>
       <button id="copyBtntk"><p>Copy TK</p></button>
       <button id="copyBtnmk"><p>Copy MK</p></button>
     </div>
@@ -139,14 +165,120 @@
 
 <script>
 // List of accounts
-const accounts = [
-  {email: 'gouflex40@gmail.com', password: 'deployiadell22'},
-  {email: 'joseno2308@gmail.com', password: '*josejose*'},
-  {email: 'tarchis03@gmail.com', password: 'adriamsfalconett'},
-  {email: 'm.smigielski2001@gmail.com', password: '01290705037PorcupineTree'},
-  {email: 'zeeshan223742@gmail.com', password: 'shani.3244'},
-  {email: 'paolariverospy@gmail.com', password: 'h101010303'},
+const 
+
+accounts = [
+{email: 'paolariverospy@gmail.com', password: 'h1010103030'},
+{email: 'mitzubob@gmail.com', password: 'Dalle12!'},
+{email: 'iuly07raul05@gmail.com', password: 'Stefymihai2005?'},
+{email: 'mihaialex2308@gmail.com', password: '23082011'},
+{email: 'saulea.s@yahoo.com', password: 'ec%%HS5H?v3DhA&'},
+{email: 'chngalvin30@gmail.com', password: 'Chng747822'},
+{email: 'mofc1903@gmail.com', password: 'mofc0147'},
+{email: 'danny.petrigal@gmail.com', password: 'dannybobo2010'},
+{email: 'sadettinsenol0606@gmail.com', password: 'KAMUguv0'},
+{email: 'lucianoparavati@hotmail.com', password: '48547689'},
+{email: 'udaykumar.anil111@gmail.com', password: 'uday@1RAGA'},
+{email: 'cg16spyop@gmail.com', password: 'JAIBGMIii11'},
+{email: 'aryanh205@gmail.com', password: 'aryanh13826'},
+{email: 'abuzerceylann@gmail.com', password: '7TgYL6y$j.HtTb*'},
+{email: 'yyedek19@gmail.com', password: 'nWY62Kvn1999'},
+{email: 'shabbaros346@gmail.com', password: 'Phaser3100'},
+{email: 'leewencoln.maina@students.jkuat.ac.ke', password: 'qwerty66ghi'},
+{email: 'jorgedavidmorenoantonio@gmail.com', password: '05101959'},
+{email: 'glennisagani88@gmail.com', password: 'awesomedude'},
+{email: 'elibustose@gmail.com', password: 'Islapuna@2030'},
+{email: 'nlado49@gmail.com', password: 'quockhang3006'},
+{email: 'nunyzale@teleg.eu', password: '20202020'},
+{email: 'jenishtamang702@gmail.com', password: 'Jenish_Tam'},
+{email: 'yanisbouzghi599@gmail.com', password: 'wyqgot-pyjgyg-3bukSu'},
+{email: 'italobulnes@gmail.com', password: 'virtualhn'},
+{email: 'correo.aloe@gmail.com', password: 'internet4508'},
+{email: 'Ahmedyassine2002@gmail.com', password: 'AhMeD.10012002'},
+{email: 'vinaycreation78@gmail.com', password: 'mafiakid247'},
+{email: 'ha.n.s.ki.tk.it@gmail.com', password: 'ha.n.s.ki.tk.it'},
+{email: 'evergreenmehak@gmail.com', password: '12345678'},
+{email: 'lenzhenys@gmail.com', password: 'E1s2a3m4s5m6dalle'},
+{email: 'contact.essghaier@gmail.com', password: '852852Aa'},
+{email: 'geecheneei@hotmail.com', password: '01012009gG'},
+{email: 'seankanishov@gmail.com', password: 'Kxxi7x11!'},
+{email: 'bartvador@duck.com', password: 'Katelyn010*'},
+{email: 'daniconchev@gmail.com', password: 'dani_123'},
+{email: 'nafizhossain321@gmail.com', password: 'A,h9cnPEaC8.GE4'},
+{email: 'amanda0410d@gmail.com', password: '!Sleep000well'},
+{email: 'emiliocornejoxxx@gmail.com', password: 'rag2312312313'},
+{email: 'cornejoemilio092@gmail.com', password: 'cyspack0312'},
+{email: 'yimaztayfun007@gmail.com', password: '11111997'},
+{email: 'matheobeucler@gmail.com', password: 'Math2008?'},
+{email: 'charles.roubiere@gmail.com', password: '777cccr81a'},
+{email: 'koketsolekau86@gmail.com', password: 'BonoloK2#'},
+{email: 'ignamuma@gmail.com', password: 'waza12456'},
+{email: 'sobowaodya@iubridge.com', password: '13579abcde24680'},
+{email: 'leon.art.official@gmail.com', password: 'pqr34827620'},
+{email: 'frankbaves@gmail.com', password: 'DaniDiosaVosMugrosa'},
+{email: 'raskal60hz@gmail.com', password: 'raskal.exe'},
+{email: 'UNKNOWN', password: 'Ares_AI1011#'},
+{email: 'rsparth2004@gmail.com', password: 'Parthleekha1'},
+{email: 'rexxepico@gmail.com', password: 'Romina.exe123'},
+{email: 'luna22012001@gmail.com', password: 'justinenzunga1'},
+{email: 'osmanbegovicevelin3@gmail.com', password: 'zanimljivsajt'},
+{email: 'babi49039@gmail.com', password: 'Biaabdul764!?'},
+{email: 'lazicuros17@gmail.com', password: 'Slusalice154'},
+{email: 'vavesoy581@24rumen.com', password: 'ayus1H@21'},
+{email: 'sayed9041971@gmail.com', password: 'Shaoni118109#'},
+{email: 'dyardler309@outlook.com', password: 'Aludyarxdr99'},
+{email: 'aremama227@gmail.com', password: 'Fer3544@@#'},
+{email: 'sanjidashrestta8989@gmail.com', password: 'shrestta8986'},
+{email: 'Jamalalserhan77@gmail.com', password: 'Jamal2006'},
+{email: 'j365030@gmail.com', password: 'JRuma@123'},
+{email: 'j365030@gmail.com', password: 'Juma@1992'},
+{email: 'gonzalomontero980@gmail.com', password: 'XDgonchiotaku88'},
+{email: 'infotechjohncv@gmail.com', password: 'openai_GPT-3'},
+{email: 'ronald9cz@gmail.com', password: 'sistemas'},
+{email: 'solsilvana@gmail.com', password: 'cronos6832'},
+{email: 'martirproducciones@gmail.com', password: 'MARTIR681976'},
+{email: 'daniel.gongora@udea.edu.co', password: 'Danielgg28'},
+{email: 'kavindakusal517@gmail.com', password: '123kusal'},
+{email: 'hmezher336@gmail.com', password: 'hadidalle2'},
+{email: 'hmezher336@gmail.com', password: 'Hadidalle336'},
+{email: 'vhspirit@gmail.com', password: 'Alayli27'},
+{email: 'nickstevenortiz@gmail.com', password: 'pinguino'},
+{email: '30ahmed3020@gmail.com', password: 'm123456789E@'},
+{email: 'kedubonheur2000@gmail.com', password: 'jasminake123*'},
+{email: 'claudiol.graciano@gmail.com', password: 'Lcg@84146516'},
+{email: 'vihugo.qs@hotmail.com', password: '38898524'},
+{email: 'beta open ia playground', password: 'CFOv3ZsO8mrw@!4'},
+{email: 'fenix200620@gmail.com', password: 'Miguel1593.'},
+{email: 'gsykesb@gmail.com', password: 'genesisypascual'},
+{email: 'itzmrshahab320@gmail.com', password: 'MRshahab320..@@'},
+{email: 'strawberrylazyparty@gmail.com', password: 'jiongrz123'},
+{email: 'sto4151@amdyes.asia', password: 'Rthdnib5281867'},
+{email: 'kdyowrlivgbjnp@metalunits.com', password: 'Honda@342'},
+{email: 'falocej134@hoxds.com', password: 'Honda@23'},
+{email: 'shahmeerhassan115@gmail.com', password: '54267890'},
+{email: 'shahmeerhassan155@gmail.com', password: '54267890'},
+{email: 'patrynia_20@wp.pl', password: 'Myszka129'},
+{email: '3919168@gmail.com', password: 'ajoy551360'},
+{email: 'aleckfe@gmail.com', password: 'Rx,3Z5YM5xqTPfG'},
+{email: 'mrmiaomiao@sohu.com', password: 'liang520'},
+{email: 'dstiven940@gmail.com', password: 'david g 123'},
+{email: 'emerson151004@gmail.com', password: '3145277666'},
+{email: 'janowskialeksander@wp.pl', password: 'Perzyny42'},
+{email: 'mauriav01@gmail.com', password: '$1989alex'},
+{email: 'demetrisfides@hotmail.com', password: '.AuY2&,YFRrRhy8'},
+{email: 'quiros.savik@gmail.com', password: 'savicita82'},
+{email: 'ron0ryan1@gmail.com', password: 'A12345678b###'},
+{email: 'andradejhoel62@gmail.com', password: 'jhoel2004'},
+{email: 'lalward.mag@gmail.com', password: 'silversherry'},
+{email: 'ahmedmostafa142004@gmail.com', password: '01229004551'},
+{email: 'mahmdgamng@gmail.com', password: '@@@312far3on'},
+{email: 'Geeezey@gmail.com', password: 'y = onetwo12345'},
+{email: 'jonesjese001@gmail.com', password: 'onetwo12345'},
+{email: 'boodygamer1232@gmail.com', password: 'BDBD1232'},
+
+
 ];
+
 
 // let selectedIndex = Math.floor(Math.random() * accounts.length);
 
@@ -171,16 +303,15 @@ document.getElementById("copyBtnmk").addEventListener("click", function() {
   navigator.clipboard.writeText(account.password);
   alert("Đã sao chép Mật khẩu ");
 
-//   // open two new tabs with the given URLs
-// setTimeout(function() {
-// window.open("https://shope.ee/2fdCcQGlML", "_blank");
-// });
 
 if (typeof window.open === 'function') {
-  // open two new tabs with the given URLs
   setTimeout(function() {
     window.open("https://shope.ee/2fdCcQGlML", "_blank");
-  }, 500);
+
+    setTimeout(function() {
+      window.open("https://www.youtube.com/minhdeptrai", "_blank");
+    }, 350);
+  }, 350);
 } else {
   console.log('Trình duyệt không hỗ trợ tính năng mở trang mới.');
 }
