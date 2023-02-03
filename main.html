@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHARE tài khoản CHAT GPT</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+
+   
+        #account, #password {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        #username, #pass {
+            font-weight: bold;
+        }
+        
+        button {
+            padding: 5px 20px;
+            font-size: 18px;
+            margin-right: 20px;
+        }
+        button p {
+            font-size: 15px;
+            padding: 0px 25px;
+        }
+    
+        p strong{
+            color: #009966;
+        }
+
+        img {
+            animation: rotate 10s linear infinite;
+            width: 100px;
+            padding-right: 10px;
+        }
+
+        .container {
+          width: 50%;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .account-info {
+        margin-top: 15px;
+        }
+    
+        .account-info h2 {
+        margin-bottom: 20px;
+        }
+
+        #copyBtn, #refreshBtn {
+            color: rgb(0, 7, 3);
+            padding: 10px 15px;
+            border: 0px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 10px;
+            cursor: pointer;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+            background-color: #d1d0d042;
+            text-transform: uppercase;
+            
+            
+
+        }
+
+        #copyBtn:hover, #refreshBtn:hover {
+            transform: translateY(2px);
+            box-shadow: 2px 4px 4px rgba(0,0,0,0.2);
+        }
+
+
+        /* Responsive styles */
+    @media (max-width: 767px) {
+    .container {
+        width: 90%;
+    }
+    }
+
+    @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+    <img src="./logo.png" alt="" >
+    <p ><strong>SHARE TÀI KHOẢN MIỄN PHÍ</strong></p>
+    <div class="account-info">
+      <h2 id="email"></h2>
+      <p id="password">Password: <span id="passwordValue"></span></p>
+      <button id="copyBtn"><p>Copy</p></button>
+      <button id="refreshBtn"><p>Làm Mới</p></button>
+    </div>
+  </div>
+
+<script>
+// List of accounts
+const accounts = [
+  {email: 'gouflex40@gmail.com', password: 'deployiadell22'},
+  {email: 'joseno2308@gmail.com', password: '*josejose*'},
+  {email: 'tarchis03@gmail.com', password: 'adriamsfalconett'},
+  {email: 'm.smigielski2001@gmail.com', password: '01290705037PorcupineTree'},
+  {email: 'zeeshan223742@gmail.com', password: 'shani.3244'},
+  {email: 'paolariverospy@gmail.com', password: 'h101010303'},
+];
+
+// Randomly tài khoản
+let account = accounts[Math.floor(Math.random() * accounts.length)];
+
+// email
+document.getElementById("email").innerHTML = account.email;
+
+// Hiển thị mật khẩu với dấu *
+document.getElementById("passwordValue").innerHTML = '*'.repeat(account.password.length);
+
+// Sự kiện cho nút sao chép
+document.getElementById("copyBtn").addEventListener("click", function() {
+  navigator.clipboard.writeText(" TK :"+account.email + " Mk :" + account.password);
+  alert("Đã sao chép");
+
+  // open two new tabs with the given URLs
+  setTimeout(function() {
+window.open("https://shope.ee/2fdCcQGlML", "_blank");
+}, 500);
+
+setTimeout(function() {
+window.open("https://www.youtube.com/watch?v=ApZ4sXMYq4g", "_blank");
+}, 1000);
+});
+
+
+//load lại tragn
+document.getElementById("refreshBtn").addEventListener("click", function() {
+  location.reload();
+});
+
+</script>
+</body>
+</html>
