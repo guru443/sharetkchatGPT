@@ -111,6 +111,7 @@
     }
   }
 
+  
   </style>
 </head>
 
@@ -170,10 +171,19 @@ document.getElementById("copyBtnmk").addEventListener("click", function() {
   navigator.clipboard.writeText(account.password);
   alert("Đã sao chép Mật khẩu ");
 
+//   // open two new tabs with the given URLs
+// setTimeout(function() {
+// window.open("https://shope.ee/2fdCcQGlML", "_blank");
+// });
+
+if (typeof window.open === 'function') {
   // open two new tabs with the given URLs
-setTimeout(function() {
-window.open("https://shope.ee/2fdCcQGlML", "_blank");
-});
+  setTimeout(function() {
+    window.open("https://shope.ee/2fdCcQGlML", "_blank");
+  }, 500);
+} else {
+  console.log('Trình duyệt không hỗ trợ tính năng mở trang mới.');
+}
 
 });
 
