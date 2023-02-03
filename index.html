@@ -86,6 +86,19 @@
     @media (max-width: 767px) {
     .container {
         width: 90%;
+      }
+    #copyBtntk,#copyBtnmk, #refreshBtn{
+        
+        width: 120px;
+        height: 68px;
+      }
+    button p {
+        font-size: 14px;
+        padding: 0px 0px;
+      }
+    p strong {
+      font-size: 20px;
+      color: #009966;
     }
     }
 
@@ -134,7 +147,9 @@ const accounts = [
   {email: 'paolariverospy@gmail.com', password: 'h101010303'},
 ];
 
-// Randomly tài khoản
+// let selectedIndex = Math.floor(Math.random() * accounts.length);
+
+// // Randomly tài khoản
 let account = accounts[Math.floor(Math.random() * accounts.length)];
 
 // email
@@ -147,12 +162,7 @@ document.getElementById("passwordValue").innerHTML = '*'.repeat(account.password
 document.getElementById("copyBtntk").addEventListener("click", function() {
   navigator.clipboard.writeText(account.email);
   alert("Đã sao chép Tài khoản ");
-
-  // open two new tabs with the given URLs
-setTimeout(function() {
-window.open("https://shope.ee/2fdCcQGlML", "_blank");
-}, 500);
-
+  
 });
 
 // Sự kiện cho nút sao chép
@@ -163,7 +173,7 @@ document.getElementById("copyBtnmk").addEventListener("click", function() {
   // open two new tabs with the given URLs
 setTimeout(function() {
 window.open("https://shope.ee/2fdCcQGlML", "_blank");
-}, 500);
+});
 
 });
 
