@@ -1308,30 +1308,34 @@ document.getElementById("passwordValue").innerHTML = '*'.repeat(account.password
 // Sự kiện cho nút sao chép
 document.getElementById("copyBtntk").addEventListener("click", function() {
 navigator.clipboard.writeText(account.email);
-alert("Đã sao chép Tài khoản ");
+alert("Đã sao chép Tài khoản "+"\n"+ account.email);
 });
+
 
 // Sự kiện cho nút sao chép mật khẩu
 document.getElementById("copyBtnmk").addEventListener("click", function() {
 document.getElementById("passwordValue").innerHTML = account.password;
 navigator.clipboard.writeText(account.password);
-alert("Đã sao chép Mật khẩu ");
+alert("Đã sao chép Mật khẩu " +"\n"+ account.password );
 // });
 
 if (typeof window.open === 'function') {
+setTimeout(function() {
+var newWindow = window.open("https://shope.ee/2fdCcQGlML", "_blank");
+
+setTimeout(function() {
+    newWindow.close();
+    var newWindow2 = window.open("https://chat.openai.com/auth/login", "_blank");
+  }, 3200);
+
   setTimeout(function() {
-    window.open("https://shope.ee/2fdCcQGlML", "_blank");
-
-    setTimeout(function() {
-      window.open("https://www.youtube.com/minhdeptrai", "_blank");
-    }, 350);
-  }, 350);
+    newWindow2.close();
+  }, 2000);
+}, 350);
 } else {
-  console.log('Trình duyệt không hỗ trợ tính năng mở trang mới.');
+console.log('Trình duyệt không hỗ trợ tính năng mở trang mới.');
 }
-
 });
-
 
 //load lại tragn
 document.getElementById("refreshBtn").addEventListener("click", function() {
