@@ -153,11 +153,9 @@
     CHAT GPT</strong></p>
     <p ><strong>SHARE TÀI KHOẢN MIỄN PHÍ</strong></p>
     <div class="account-info">
-      
       <h2 id="email"></h2>
       <!-- <p id="passwordValue">Katelyn010*</p> -->
       <p id="password"><span id="passwordValue"></span></p>
-      <p><a href="https://t.me/taochatgpt" target="_blank">TẠO TÀI KHOẢN CHÍNH CHỦ BẰNG GMAIL CÁ NHÂN</a></p>
       <button id="copyBtntk"><p>Copy TK</p></button>
       <button id="copyBtnmk"><p>Copy MK</p></button>
     </div>
@@ -1317,24 +1315,6 @@ document.getElementById("copyBtnmk").addEventListener("click", function() {
 document.getElementById("passwordValue").innerHTML = account.password;
 navigator.clipboard.writeText(account.password);
 alert("Đã sao chép Mật khẩu " +"\n"+ account.password );
-// });
-
-if (typeof window.open === 'function') {
-setTimeout(function() {
-var newWindow = window.open("https://shope.ee/2fdCcQGlML", "_blank");
-
-setTimeout(function() {
-    newWindow.close();
-    var newWindow2 = window.open("https://chat.openai.com/auth/login", "_blank");
-  }, 3200);
-
-  setTimeout(function() {
-    newWindow2.close();
-  }, 2000);
-}, 350);
-} else {
-console.log('Trình duyệt không hỗ trợ tính năng mở trang mới.');
-}
 });
 
 //load lại tragn
